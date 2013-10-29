@@ -1,0 +1,4 @@
+teamcity:
+  endpoint: ""
+  http_user: ""
+  http_password: ""
