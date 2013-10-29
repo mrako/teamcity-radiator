@@ -1,4 +1,4 @@
 teamcity:
-  endpoint: ""
-  http_user: ""
-  http_password: ""
+  endpoint: "http://teamcity.jetbrains.com/app/rest/"
+  http_user: "guest"
+  http_password: "guest"
