@@ -5,6 +5,8 @@ require "sinatra/config_file"
 
 require "haml"
 
+Dir[File.join(File.expand_path(File.dirname(__FILE__)), "app/models/*.rb")].each{ |file| require file }
+
 require "./app"
 
 config_file './config.yml'
