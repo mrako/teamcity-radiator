@@ -1,6 +1,8 @@
-- @projects.each do |p|
-  %h1= p[:name]
-
-  - p[:types].each do |t|
-    .list-tile{class: "#{t[:status]}"}
-      .tile-title= t[:name]
+#container.variable-sizes
+  - @projects.each do |p|
+    - p[:types].each do |t|
+      .element.nonmetal.width2
+        .number num
+        %h3.symbol symb
+        %h2.name name
+        %p.weight weight

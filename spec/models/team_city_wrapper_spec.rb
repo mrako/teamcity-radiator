@@ -40,7 +40,7 @@ describe TeamCityWrapper do
 
       TeamCity.should_receive(:builds).with(buildType: "build_123").and_return(builds)
 
-      TeamCityWrapper.build_status_for_type("build_123").should == "green"
+      TeamCityWrapper.build_status_for_type("build_123").should == "success"
     end
 
     it "should return last failing build status" do
@@ -48,7 +48,7 @@ describe TeamCityWrapper do
 
       TeamCity.should_receive(:builds).with(buildType: "build_111").and_return(builds)
 
-      TeamCityWrapper.build_status_for_type("build_111").should == "red"
+      TeamCityWrapper.build_status_for_type("build_111").should == "failure"
     end
   end
 

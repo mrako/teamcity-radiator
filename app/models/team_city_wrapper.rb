@@ -18,7 +18,9 @@ class TeamCityWrapper
   end
 
   def self.build_status_for_type(id)
-    TeamCity.builds(buildType: id).last.status == "SUCCESS" ? "green" : "red"
+    builds = TeamCity.builds(buildType: id)
+
+    builds.empty? ? "empty" : builds.last.status.downcase
   end
 
   def self.projects
