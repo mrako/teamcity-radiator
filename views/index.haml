@@ -1,7 +1,3 @@
-%html
-  %head
-    %title Radiator
-
-    - @projects.each do |p|
-      .list-tile{style: "green" if }
-        .tile-title= p.name
+- @projects.each do |p|
+  .list-tile{class: "green"}
+    .tile-title= p.name

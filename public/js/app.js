@@ -1,3 +1,3 @@
 $(document).ready(function(){
-  $(".live-tile").not(".exclude").liveTile();
+  $(".list-tile").not(".exclude").liveTile();
 });
