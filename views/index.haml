@@ -1,8 +1,10 @@
-#container.variable-sizes
+= # haml :options
+
+#container.variable-sizes.clickable.clearfix
   - @projects.each do |p|
     - p[:types].each do |t|
-      .element.width2{class: t[:status]}
-        .number= t[:name]
-        %h3.symbol= p[:name]
+      .element.width2{class: t[:status], "data-category" => t[:status], "data-remote" => t[:href]}
+        .number= p[:name]
+        %h3.symbol= t[:name]
         %h2.name= p[:name]
         %p.weight

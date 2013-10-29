@@ -12,7 +12,7 @@ class TeamCityWrapper
   def self.collect_buildtypes(id)
     Array.new.tap do |types|
       TeamCity.project_buildtypes(id: id).each { |b|
-        types << {name: b.name, status: build_status_for_type(b.id)}
+        types << {name: b.name, href: b.webUrl, status: build_status_for_type(b.id)}
       }
     end
   end

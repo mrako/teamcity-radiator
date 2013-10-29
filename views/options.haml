@@ -1,0 +1,29 @@
+%section#options.clearfix
+  %h3 Filters
+
+
+  %ul#filters.option-set.clearfix{"data-option-key" => "filter"}
+    %li
+      %a.selected{href: "#filter=*"} show all
+    %li
+      %a{href: "#filter=.failure"} failed
+    %li
+      %a{href: "#filter=.success"} success
+    %li
+      %a{href: "#filter=.empty"} empty
+
+  
+  %h3 Sort
+  %ul#sort-by.option-set.clearfix{"data-option-key" => "sortBy"}
+    %li
+      %a.selected{data: "", "data-option-value" => "original-order", href: "#sortBy=original-order"} original-order
+    %li
+      %a{"data-option-value" => "category", href: "#sortBy=category"} category
+  
+  %h3 Sort direction
+  %ul#sort-direction.option-set.clearfix{"data-option-key" => "sortAscending"}
+    %li
+      %a.selected{"data-option-value" => "true", href: "#sortAscending=true"} sort ascending
+    %li
+      %a{"data-option-value" => "false", href: "#sortAscending=false"} sort descending
+  
