@@ -1,3 +1,6 @@
 - @projects.each do |p|
-  .list-tile{class: "green"}
-    .tile-title= p.name
+  %h1= p.name
+
+  - @jobs[p.id].each do |j|
+    .list-tile{class: "#{@states[j.id]}"}
+      .tile-title= j.name
