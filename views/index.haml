@@ -1,8 +1,8 @@
 #container.variable-sizes
   - @projects.each do |p|
     - p[:types].each do |t|
-      .element.nonmetal.width2
-        .number num
-        %h3.symbol symb
-        %h2.name name
-        %p.weight weight
+      .element.width2{class: t[:status]}
+        .number= t[:name]
+        %h3.symbol= p[:name]
+        %h2.name= p[:name]
+        %p.weight
