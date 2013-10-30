@@ -2,6 +2,7 @@ require "rubygems"
 
 require "sinatra"
 require "sinatra/config_file"
+require "sinatra/twitter-bootstrap"
 
 require "haml"
 

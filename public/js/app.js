@@ -1,4 +1,13 @@
 $(function(){
+  var img = $("<img />").attr('src', $("#burndown").attr("data-remote"))
+    .load(function() {
+        if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
+            alert('broken image!');
+        } else {
+            $("#burndown").append(img);
+        }
+    });
+
 
   var $container = $('#container'),
       // object that will keep track of options

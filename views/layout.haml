@@ -2,6 +2,9 @@
 %html
   %head
     %title Teamcity Radiator
+
+    = bootstrap_assets
+
     %link(rel="stylesheet" href="css/isotope.css")
     %link(rel="stylesheet" href="css/styles.css")
     
@@ -11,4 +14,10 @@
     
     %script(src="js/app.js" type="text/javascript")
   %body
-    =yield
+    - container :fluid do
+      - row do
+        - span4 do
+          = haml :burndown
+        - span8 do
+          = yield
+

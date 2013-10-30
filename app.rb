@@ -1,3 +1,6 @@
+
+register Sinatra::Twitter::Bootstrap::Assets
+
 set :haml, format: :html5
  
 get "/" do
