@@ -4,7 +4,7 @@ require 'warbler'
 
 include Rake::DSL
 
-task :default => :warble
+task :default => :start
 
 RSpec::Core::RakeTask.new(:spec) do |t|
   t.rspec_opts = ["--tty", "--colour"]
@@ -15,18 +15,7 @@ task :warble do
   sh "warble"
 end
 
-namespace :war do
-  task :bundle do
-    sh "warble"
-  end
-  
-  task :rename_and_copy do
-    sh "mv deploy/radiator.war jetty/webapps/ROOT.war"
-  end
-  
-  task :start do
-    sh "cd jetty; java -Djetty.port=8080 -jar start.jar"
-  end
-  
-  task :deploy => [:bundle, :rename_and_copy, :start]
+task :start do
+  sh "warble"
+  sh "java -jar deploy/radiator.war"
 end
