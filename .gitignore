@@ -2,3 +2,5 @@
 
 config.yml
 test.rb
+
+deploy/*.war
