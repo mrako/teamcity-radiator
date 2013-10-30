@@ -21,7 +21,7 @@ namespace :war do
   end
   
   task :rename_and_copy do
-    sh "mv radiator.war jetty/webapps/ROOT.war"
+    sh "mv deploy/radiator.war jetty/webapps/ROOT.war"
   end
   
   task :start do
