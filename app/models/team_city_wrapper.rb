@@ -33,6 +33,6 @@ class TeamCityWrapper
   end
 
   def self.projects
-    TeamCity.projects.reject{|k| k.id == "_Root"}
+    TeamCity.projects.reject{|k| k.id == "_Root"}.select{|k| (k[:name] == "Apache Ivy")}
   end
 end
